@@ -1,0 +1,110 @@
+
+:local interfaceWAN         "sfp-plus1";
+:local prefix               "mikrotik-stats";
+:local ZAPURL             "http://wa-server.us.to:8123/INICIO&";
+:local dataParams;
+
+:local enBoard true
+:local enPerf true
+:local enHealth true
+:local enRouter true
+:local enRouting true
+:local enFirewall true
+
+
+:local boardData; :local identity; :local model; :local serial;
+if ( $enBoard ) do={
+:put "Informações do Hardware Mikrotik"
+    :set identity             [/system identity get name];
+    :set model                [/system routerboard get model];
+    :set serial         [/system routerboard get serial-number];
+    :set boardData        "identity=$identity&model=$model&serial=$serial"
+    :set dataParams $boardData;
+
+}
+
+:local thing          "$prefix-$serial"
+
+:local perfData; 
+:local cpuLoad; 
+:local memFree;
+:local memFreeMb; 
+:local uptime;
+if ( $enPerf ) do={
+    :put "CPU, Memória e HD"
+    :delay 5
+    :set cpuLoad [/system resource get cpu-load];
+    :set memFree [/system resource get free-memory];
+	:set memFreeMb ((($memFree/1024)/1024)/1024);
+    :set uptime [/system resource get uptime];
+    :set perfData "cpu-load=$cpuLoad&uptime=$uptime&mem-free=$memFreeMb"
+    :set dataParams ( $dataParams . "&" . $perfData . "G");
+}
+
+:local healthData; :local volts; :local amps; :local watts; :local temp; :local cpuTemp; :local fanSpeed;
+if ( $enHealth ) do={
+    :put "Temepratura, Voltagem, Amperagem, Consumo, Temperatuda da CPU, Rotação da FAN"
+    :set volts [/system health get voltage];
+    :set amps ([/system health get current]/1000);
+    :set watts [/system health get power-consumption];
+    :set temp [/system health get temperature];
+    :set cpuTemp [/system health get cpu-temperature];
+    :set fanSpeed [/system health get fan1-speed];
+    :set healthData "volts=$volts V&amps=$amps A&watts=$watts W&temp=$temp C&cpu-temp=$cpuTemp C&fan-speed=$fanSpeed RPM"
+    :set dataParams ( $dataParams . "&" . $healthData);
+}
+
+:local routerData; :local ipRoutes;
+if ( $enRouter ) do={
+    :put "Tabela de Roteamento"
+    :set ipRoutes [:len [/ip route find]];
+    :set routerData  "ip-routes=$ipRoutes"
+    :set dataParams ( $dataParams . "&" . $routerData);
+}
+
+:local firewallData; :local ipFwConx;
+if ( $enFirewall ) do={
+    :put "Tabela do Firewall";
+    :set ipFwConx [/ip firewall connection tracking get total-entries];
+    :set firewallData "ip-fw-conx=$ipFwConx";
+    :set dataParams ( $dataParams . "&" . $firewallData);
+}
+
+:local iname;
+:local monitor;
+:local speedRX;
+:local speedTX;
+:local mbpsRX;
+:local mbpsTX;
+:local iveloc;
+:put "Consumo da porta WAN";
+:foreach interface in=[/interface find name=$interfaceWAN] do={
+	:delay 100ms;
+	:set $iname [/interface get $interface name];
+	:set $monitor [/interface monitor-traffic $iname as-value once];
+	:set $speedRX ($monitor->"rx-bits-per-second");
+	:set $speedTX ($monitor->"tx-bits-per-second");
+	:set $mbpsRX (($speedRX/1000)/1000);
+	:set $mbpsTX (($speedTX/1000)/1000);
+	:set firewallData "WAN=$iname";
+	:set dataParams ( $dataParams . "&" . $firewallData);
+	:set firewallData ($iname."_RX=$mbpsRX");
+	:set dataParams ( $dataParams . "&" . $firewallData . " Mbps" );
+	:set firewallData ($iname."_TX=$mbpsTX");
+	:set dataParams ( $dataParams . "&" . $firewallData . " Mbps" );
+}
+:put $boardData
+:put $perfData
+:put $healthData
+:put $routerData
+:put $routingData
+:put $firewallData
+:put "$iname RX:$mbpsRX Mbps TX:$mbpsTX Mbps"
+
+
+:local finalURL;
+:set finalURL "$ZAPURL$dataParams\n\n" 
+
+:put $finalURL
+
+/tool fetch url="$finalURL" mode=http keep-result=no
