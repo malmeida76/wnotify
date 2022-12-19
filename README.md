@@ -6,7 +6,7 @@ Wnotify - Gestor de cobranças GRÁTIS MK-AUTH e monitoramento PPPoe e Recursos 
 ## Intrdução
 
 
-**WNOTIFY** Este programa permite que gratuitamente qualquer provedor de internet que use MK-AUTH possa enviar para seus clientes, uma mensagem personalizada com a cobrança mensal, alem do mesmo programa monitorar clientes PPPoe e recursos (LINK, MEMÓRIA, ROTAS, ESPAÇO EM DISCO, CPU, ETC) de equipamentos MIKROTIK, tudo isso diretamente via Whatsapp.
+**WNOTIFY** Este programa permite que gratuitamente qualquer provedor de internet que use MK-AUTH possa enviar para seus clientes, uma mensagem personalizada com a cobrança mensal, alem do mesmo programa monitorar clientes PPPoe e recursos mikrotik (CPU, Memória, HD, Temperatura, Voltagem, Amperagem, Consumo, Temperatuda da CPU, Rotação da FAN, Tabela de rotas, tabela NAT do firewall e Consumo do Link), tudo isso diretamente via Whatsapp.
 
 ## Oque esse sistema faz
 
