@@ -34,7 +34,7 @@ Passo 2 => CONFIGURAÇÃO DO TEMPLATE DE COBRANÇA<br>
 Repita os passos acima para enviar nas outras datas disponíveis.
 
 Passo 3 => CONFIGURAÇÃO DO SCRIPT DE MONITORAMENTO MIKROTIK<br>
-Altere o parametro (interfaceWAN) para o nome da interfaçe que você deseja monitorar (geralmente a interface que recebe o link)<br>
+Pegue <a href="https://raw.githubusercontent.com/malmeida76/wnotify/main/monitor">aqui</a> o script e altere o parametro (interfaceWAN) para o nome da interfaçe que você deseja monitorar (geralmente a interface que recebe o link) e configure seu mikrotik conforme a tela abaixo<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/script-monitor.png" alt="config mikrotik recursos wnotify">
 
 
