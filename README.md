@@ -26,6 +26,11 @@ Wnotify - Gestor de cobranças GRÁTIS MK-AUTH e monitoramento PPPoe e Recursos 
 - Na versão GRATUITA, o provedor configura seu MK-AUTH exatamente como as telas abaixo e o sistema vai disparar as mensagens de alerta para o celular inserido e as mensagens de cobrança usando o numero da empresa para isso. Os seguintes campos podem ser personalizados pelo provedor (NOME, WHATSAPP, EMAIL, TELEFONE, LOGOMARCA). Nessa versão serão permitidas até 100 cobranças mensais e cadastro de ate 1 mikrotik para notificação dos recursos e clientes PPPoE.
 - Para personalizar e tambem aumentar a quantidade de mensagens, entre em contato para saber mais pelo Whatsapp https://wa.me/552135270712
 
+Passo 1 (MK-AUTH)
+<img src="https://github.com/malmeida76/wnotify/blob/main/config%20mk-auth.png" alt="config mk-auth wnotify">
+
+Passo 2 (MK-AUTH)
+<img src="https://github.com/malmeida76/wnotify/blob/main/config%20mk-auth.png" alt="config mk-auth wnotify">
 
 ## Contato
 https://wa.me/552135270712
