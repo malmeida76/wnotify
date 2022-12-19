@@ -6,4 +6,4 @@
 :local service [/ppp active get [find name=$user] service];
 :local comment [/ppp active get [find name=$user] comment];
 :local active [/ppp active print count];
-/tool fetch url="http://wa-server.us.to:8123/INICIO&POP=$empresa&ZAP=$ZAPZAP&User=$user&Acao=CONECTOU&IPClient=$ips&MAC=$caller&TotalActive=$active&Comment=$comment\n\n" mode=http keep-result=no;
+/tool fetch url="http://wa-server.us.to:8123/INICIO&POP=$empresa&ZAP=$zapzap&User=$user&Acao=CONECTOU&IPClient=$ips&MAC=$caller&TotalActive=$active&Comment=$comment\n\n" mode=http keep-result=no;
