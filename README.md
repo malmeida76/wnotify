@@ -30,7 +30,7 @@ Passo 1 (MK-AUTH)
 <img src="https://github.com/malmeida76/wnotify/blob/main/config%20mk-auth.png" alt="config mk-auth wnotify">
 
 Passo 2 (MK-AUTH)
-<img src="https://github.com/malmeida76/wnotify/blob/main/config%20mk-auth.png" alt="config mk-auth wnotify">
+<img src="https://github.com/malmeida76/wnotify/blob/main/CONFIG%20MK-AUTH%202.PNG" alt="config mk-auth wnotify">
 
 ## Contato
 https://wa.me/552135270712
