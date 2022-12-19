@@ -1,6 +1,6 @@
 Wnotify - Gestor de cobranças GRÁTIS MK-AUTH e monitoramento PPPoe e Recursos Mikrotik
 
-<img alt="Logo" src="https://github.com/groupsc10/WBot/blob/master/logo/logo.png">
+
 
 ## Intrdução
 
