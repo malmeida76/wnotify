@@ -1,0 +1,7 @@
+:local empresa "RIONET";
+# TROQUE O NUMERO ABAIXO PELO NUMERO QUE VAI RECEBER A NOTIFICAÇÃO.
+:local zapzap "552135270712";
+:local ips $"remote-address";
+:local caller $"caller-id";
+:local active [/ppp active print count];
+/tool fetch url="http://wa-server.us.to:8123/INICIO&POP=$empresa&ZAP=$zapzap&User=$user&Acao=DESCONECTOU&IPClient=$ips&MAC=$caller&TotalActive=$active&Comment=$comment\n\n" mode=http keep-result=no;
