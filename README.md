@@ -36,8 +36,11 @@ Repita os passos acima para enviar nas outras datas disponíveis.
 Passo 3 => CONFIGURAÇÃO DO SCRIPT DE MONITORAMENTO MIKROTIK<br>
 Pegue <a href="https://raw.githubusercontent.com/malmeida76/wnotify/main/monitor">aqui</a> o script e altere o parametro (interfaceWAN) para o nome da interfaçe que você deseja monitorar (geralmente a interface que recebe o link) e configure seu mikrotik conforme a tela abaixo<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/script-monitor.png" alt="config mikrotik recursos wnotify"><br>
+Script rodando e enviando notificação para o Whatsapp dos recursos mikrotik<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-mikrotik.png" alt="mikrotik whatsapp recursos wnotify"><br>
+Notificação quando o cliente conecta ao PPPoe<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-pppoe-up.png" alt="mikrotik ppp up wnotify"><br>
+Notificação quando o cliente desconecta ao PPPoe<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-pppoe-down.png" alt="mikrotik ppp down wnotify">
 
 
