@@ -38,9 +38,9 @@ Pegue <a href="https://raw.githubusercontent.com/malmeida76/wnotify/main/monitor
 <img src="https://github.com/malmeida76/wnotify/blob/main/script-monitor.png" alt="config mikrotik recursos wnotify"><br>
 Script rodando e enviando notificação para o Whatsapp dos recursos mikrotik<br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-mikrotik.png" alt="mikrotik whatsapp recursos wnotify"><br>
-Notificação quando o cliente conecta ao PPPoe<br>
+Notificação quando o cliente conecta ao PPPoe, o script pode ser copiado <a href="https://raw.githubusercontent.com/malmeida76/wnotify/main/ppp-onup">aqui</a><br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-pppoe-up.png" alt="mikrotik ppp up wnotify"><br>
-Notificação quando o cliente desconecta ao PPPoe<br>
+Notificação quando o cliente desconecta ao PPPoe, o script pode ser copiado <a href="https://raw.githubusercontent.com/malmeida76/wnotify/main/ppp-ondown">aqui</a><br>
 <img src="https://github.com/malmeida76/wnotify/blob/main/monitoramento-pppoe-down.png" alt="mikrotik ppp down wnotify">
 
 
