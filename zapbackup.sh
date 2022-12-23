@@ -9,7 +9,7 @@
 #TELEFONE OU GRUPO WHATSAPP QUE VAI RECEBER O BACKUP
 #120363023073831734@g.us grupo
 #552135270712@c.us teefone
-WhatsAppTo="120363023073831734@g.us"
+WhatsAppTo="552135270712@c.us"
 
 BkpFile=$(ls -t /opt/mk-auth/bckp/ | head -1)
 
