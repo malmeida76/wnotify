@@ -1,6 +1,6 @@
 
 <img align=top src="https://github.com/malmeida76/wnotify/blob/main/whatsapp-mikrotik.jpg" alt="whatsapp mikrotik WNotify">
-Wnotify - Gestor de cobranças GRÁTIS MK-AUTH e monitoramento PPPoe e Recursos Mikrotik
+Wnotify - Gestor de cobranças MK-AUTH e monitoramento PPPoe e Recursos Mikrotik
 
 
 ## Intrdução
@@ -45,7 +45,7 @@ Notificação quando o cliente desconecta ao PPPoe, o script pode ser copiado <a
 
 
 
-- Para personalizar e tambem aumentar a quantidade de mensagens, entre em contato para saber mais pelo Whatsapp https://wa.me/552135270712
+- Para personalizar e tambem aumentar a quantidade de mensagens, entre em contato para saber mais fmsistemas@gmx.com.br
 
 ## Contato
-https://wa.me/552135270712
+fmsistemas@gmx.com.br
